@@ -1,0 +1,79 @@
+mutrate  1e-08
+useRec 1 
+useHotRec 0 
+recrate  1e-08
+hotrecrate 1e-06
+hotrecStart 80000
+hotrecStop  81999
+seqlength 26500
+sampsize  100
+sampfreq 100
+printhapfreq 5000
+getWindowStats 1
+windowSize 500
+windowStep 500
+pop_num 1
+modelMigration 0
+migration_rates 0. 0. 0. 0. 0. 0.005 0. 0.005 0.
+runlength 1000000
+diploid_sample 1
+trackAlleleBirths 1
+DEME    /// 0
+popsize  10000
+demography 0
+birthgen 0
+extinctgen 1000002
+dem_parameter 0  
+dem_start_gen 0   
+dem_end_gen 1000002
+carrying_cap 0 0 0
+useMS 1
+mscommand ./ms 20000 1 -t 10.6 -r 10.6 26500 >ms_output
+splitgenesis 0 0 0
+mergegenesis  0 0 0
+sellocus 10000 1 0.05 0.025 1
+possel 0.05 0. 0. 
+nfdsel 0. 0. 
+negsel 0. 1. 12500 14000 1000
+DEME    /// 1
+popsize  5000
+demography 0
+birthgen 100
+extinctgen 50001
+dem_parameter 0  
+dem_start_gen 0   
+dem_end_gen 60000
+carrying_cap 0 0 0
+useMS 0
+mscommand ./ms 
+splitgenesis 1 0 50
+mergegenesis 0 0 0
+possel 0 0 0 100000 5000 1 0.1 0.025 
+DEME    /// 2
+popsize  5000
+demography 0
+birthgen 100
+extinctgen 50001
+dem_parameter 0  
+dem_start_gen 0   
+dem_end_gen 60000
+carrying_cap 0 0 0
+useMS 0
+mscommand ./ms 
+splitgenesis 1 0 50
+mergegenesis 0 0 0
+possel 0 0 0 100000 1 1 0.1 0.025
+DEME    /// 3
+popsize  1000
+demography 0
+birthgen 200000
+extinctgen 210000
+dem_parameter 0  
+dem_start_gen 0   
+dem_end_gen 100001
+carrying_cap 0 0 0
+useMS 0
+mscommand ./ms 
+splitgenesis 0 0 0 
+mergegenesis 1 1 2
+possel 0 0 0 100000 1 1 0.1 0.025
